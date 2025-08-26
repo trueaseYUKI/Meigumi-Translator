@@ -1,0 +1,67 @@
+# 依赖目录 - 核心项，绝对不能上传
+
+node_modules/
+.output/chrome-mv3-dev/ # 你指定的目录
+
+# 构建输出目录 - 不同工具和框架的构建产物
+
+/dist/
+/build/
+/.vuepress/dist/
+/.next/
+/out/
+
+# 缓存文件
+
+.cache/
+\*.tgz
+
+# 日志文件
+
+_.log
+npm-debug.log_
+yarn-debug.log*
+yarn-error.log*
+
+# 运行时数据
+
+pids
+_.pid
+_.seed
+\*.pid.lock
+
+# 依赖锁定文件（可选，但通常建议保留）
+
+# package-lock.json 和 yarn.lock 应该被提交，以确保所有协作者安装完全一致的依赖。
+
+# 如果你不确定，最好不要忽略它们。
+
+# package-lock.json
+
+# yarn.lock
+
+# 环境变量文件 - 非常重要！绝对不能上传敏感信息
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 编辑器目录和文件（如 VSCode）
+
+.vscode/
+.idea/
+_.swp
+_.swo
+\*~
+
+# 操作系统生成的文件
+
+.DS*Store
+.DS_Store?
+.*\*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

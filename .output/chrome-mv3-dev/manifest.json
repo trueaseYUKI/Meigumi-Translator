@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Meigumi-Translator",
+  "description": "一个沉浸式翻译软件，即可以翻译网页又可以翻译PDF",
+  "version": "0.0.0",
+  "icons": {
+    "16": "icon/icon-16.png",
+    "32": "icon/icon-32.png",
+    "48": "icon/icon-48.pngg",
+    "128": "icon/icon-128.png"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://fanyi-api.baidu.com/api/trans/vip/translate",
+    "https://api.deepseek.com",
+    "https://dashscope-intl.aliyuncs.com/api/v1",
+    "http://*/*",
+    "https://*/*",
+    "http://localhost/*"
+  ],
+  "commands": {
+    "wxt:reload-extension": {
+      "description": "Reload the extension during development",
+      "suggested_key": {
+        "default": "Alt+R"
+      }
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Default Popup Title",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval' http://localhost:3000; object-src 'self';",
+    "sandbox": "script-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost:3000; sandbox allow-scripts allow-forms allow-popups allow-modals; child-src 'self';"
+  }
+}
