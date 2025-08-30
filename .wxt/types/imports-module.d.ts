@@ -20,5 +20,6 @@ declare module '#imports' {
   export { fakeBrowser } from 'wxt/testing';
   export { default as httpClient, ApiResponse, RequestOptions } from '../utils/httpClient';
   export { getInfo, saveInfo, removeInfo } from '../utils/storage';
+  export { isTargetTag, parseTargetTags } from '../utils/tagPrase';
   export { translate } from '../utils/translator';
 }

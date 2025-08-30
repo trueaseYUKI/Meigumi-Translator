@@ -17,3 +17,10 @@ export interface TranslateResult {
   srcHTML?: HTMLElement | string | null | undefined
   destHTML?: HTMLElement | string | null | undefined
 }
+
+// 扩展Window接口
+declare global {
+  interface Window {
+    __TRANSLATE_TAGS__: TargetTag[] | undefined;
+  }
+}
